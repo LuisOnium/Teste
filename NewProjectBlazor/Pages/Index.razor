@@ -1,0 +1,29 @@
+﻿@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<RadzenButton Text="@text" Click="@SayHii"></RadzenButton>
+@code {
+    string text = "Hi";
+    public void SayHii()
+    {
+        switch (text)
+        {
+            case "Hi":
+                text = "Hi learner.";
+                break;
+            case "Hi learner.":
+                text = "Hi";
+                break;
+            default:
+                text = "Hi";
+                break;
+        }
+    }
+}
